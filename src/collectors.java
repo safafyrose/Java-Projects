@@ -10,8 +10,9 @@ public class collectors {
         String[] fruits = {"apple", "banana", "orange"};
         List<String> fruitList = Arrays.asList(fruits);
         Stream<String> stream1 = fruitList.stream();
+        //List<String> vowel = stream1.filter(name->name.startsWith("a")).toList();
         List<String> vowel = stream1.filter(name -> name.startsWith("a")).collect(Collectors.toCollection(ArrayList::new)); //mapping
         System.out.println(fruitList);
         System.out.println(vowel);
-    }
+}
 }
